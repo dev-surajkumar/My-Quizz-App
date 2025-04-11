@@ -1,0 +1,225 @@
+/* Fonts from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* declaring some variables */
+:root{
+    --textColor: #0ad0f4;
+    --bcgColorSolid:var(--bcgColor);
+    --bcgColorTransparent:var(--bcgColorSolid);
+    --lightBorder: rgb(104, 103, 103);
+    --border: .5rem;
+    --fontWhite: #ffffff;
+    --quesBorderColor: rgb(216, 175, 99);
+    --quesBorder: 2rem;
+    --ansNextButtonColor: #069bdf;
+    --ansNextButtonBorder: 2.5rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* The name for all 3 html file container is same so It's reuseable */
+.container{
+    height: auto;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--border);
+    box-shadow: 0px 0px 10px var(--lightBorder);
+    padding: 1rem;
+    margin: 1.5rem;
+    gap: 1rem;
+}
+.logo img{
+    width: 6rem;
+}
+.user-input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.greet{
+    color: var(--textColor);
+}
+.user-input input{
+    width: 80%;
+    height: 2rem;
+    border: none;
+    border-radius: var(--border);
+    outline: none;
+    box-shadow: 0px 0px 5px var(--lightBorder);
+    padding-left: .5rem;
+}
+.user-input button{
+    width: 15%;
+    height: 2rem;
+    border-radius: var(--border);
+    border: none;
+    background-color: var(--textColor);
+    color: var(--fontWhite);
+}
+.info-for-user{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5rem;
+    opacity: .7;
+}
+.info-for-user p{
+    font-size: 1rem;
+}
+.info-for-user hr{
+    width: 100%;
+}
+.category-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.category-container h1{
+    color: var(--textColor);
+    text-align: center;
+}
+.category{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem 0 1rem 0;
+}
+.category button{
+    width: 45%;
+    height: 3rem;
+    border: 2px solid var(--ansNextButtonColor);
+    border-radius: var(--border);
+    background-color: #cdeff6;
+    opacity: .7;
+    font-size: 1rem;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+/* From here, it is for the quiz page */
+.topic-display{
+    font-size: 1.5rem;
+}
+.quiz-detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-right: 2rem;
+}
+.quiz-detail span{
+    font-weight: 700;
+}
+.quiz-timer{
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--textColor);
+    border: 2px solid var(--textColor);
+    border-radius: 50%;
+}
+
+
+.question{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .8rem;
+    border: 2px solid var(--quesBorderColor);
+    border-radius: var(--border);
+}
+.quesNum{
+    font-size: 1.5rem;
+    border: 2px solid var(--textColor);
+    padding: .5rem;
+    border-radius: 50%;
+    margin-top: -2.3rem;
+    background: var(--fontWhite);
+    color: var(--textColor);
+    font-weight: 700;
+}
+.options{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.options button{
+    width: 45%;
+    height: 3rem;
+    border: 2px solid var(--ansNextButtonColor);
+    border-radius: var(--ansNextButtonBorder);
+    background: var(--fontWhite);
+    color: var(--textColor);
+    font-size: 1rem;
+}
+.quesToggle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quesToggle button{
+    width: 45%;
+    height: 3rem;
+    border: 2px solid var(--ansNextButtonColor);
+    border-radius: var(--ansNextButtonBorder);
+    background: var(--fontWhite);
+    color: var(--textColor);
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+/* From here, its for the result page. */
+.result-h1{
+    color: var(--textColor);
+}
+.result-detail{
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.result-button{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.result-button button{
+    width: 30%;
+    height: 3rem;
+    color: var(--textColor);
+    background: var(--fontWhite);
+    border-radius: var(--ansNextButtonBorder);
+    border: 2px solid var(--ansNextButtonColor);
+    padding: .5rem;
+    font-size: 1rem;
+}
